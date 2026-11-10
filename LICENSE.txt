@@ -1,0 +1,11 @@
+ENCHANTED WILDS ASSET LICENSE
+
+Copyright (c) 2026 Blaine Ritz / Winged Relay Asset Studio.
+
+You may use, modify and incorporate these assets in commercial and non-commercial games and other finished creative works. You may distribute those works with the assets embedded. Team members and contractors may access the assets solely for your projects. Credit is appreciated but optional.
+
+You may not resell, sublicense or redistribute the assets, modified assets or source files as a standalone asset collection or competing asset product. Do not claim you created the original models. This license does not grant ownership of the assets or exclusive rights.
+
+This free forest pack and its included free Leafy demonstration use these same terms.
+
+Models originated from the creator's paid Meshy account. Image/model creation, optimization, Godot code, documentation and packaging use AI-assisted tools and human review. No AI runs in the project. No affiliation with Meshy, Blender or Godot is implied.

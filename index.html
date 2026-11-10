@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Operation: Shadow Strike</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="modesel.css">
+</head><body>
+<canvas id="c"></canvas>
+<div id="grade"></div>
+<div id="load" class="scr on"><h1>SHADOW STRIKE</h1><div class="ldbar"><i></i></div><div id="loadmsg">Carregando engine 3D…</div>
+<button class="b" id="retry" style="display:none" onclick="location.reload()">TENTAR DE NOVO</button></div>
+<div id="menu" class="scr"><h1>OPERATION:<br>SHADOW STRIKE</h1>
+<button class="b main-mode ms-mainplay" id="bplay">JOGAR<small>SELECIONAR MODO DE JOGO · 12 MODOS</small></button>
+<button class="b ms-quick" id="bquick" style="display:none">JOGAR NOVAMENTE<small id="bquickt"></small></button>
+<button class="b" id="bshop">LOJA / ARSENAL</button><button class="b" id="bprog">PROGRESSO</button>
+<button class="b" id="bset">CONFIGURAÇÕES</button>
+<button class="b" id="bctl">CONTROLES</button><button class="b" id="babt">SOBRE</button><div id="progbar" style="font-size:13px;color:#9bc35a;margin-top:6px"></div><div id="best" style="font-size:12px"></div></div>
+<div id="modesel" class="scr ms" role="dialog" aria-label="Seleção de modo de jogo">
+<div class="ms-bg" aria-hidden="true"><i class="ms-bgA"></i><i class="ms-bgB"></i></div>
+<div class="ms-fx" aria-hidden="true"></div>
+<header class="ms-top">
+<div class="ms-brand"><b>SHADOW STRIKE</b><span>SELEÇÃO DE MODO</span></div>
+<kbd class="ms-kh">Q</kbd><nav class="ms-tabs" role="tablist" aria-label="Categorias"></nav><kbd class="ms-kh">E</kbd>
+<button type="button" class="ms-close" aria-label="Voltar ao menu">✕</button>
+</header>
+<div class="ms-mid">
+<button type="button" class="ms-arr l" aria-label="Rolar para a esquerda">‹</button>
+<main class="ms-track"><div class="ms-rail" role="listbox" aria-label="Modos de jogo"><div class="ms-feat"></div><div class="ms-grid"></div></div></main>
+<button type="button" class="ms-arr r" aria-label="Rolar para a direita">›</button>
+</div>
+<footer class="ms-bot">
+<button type="button" class="ms-btn ms-back" aria-label="Voltar"><span class="ic">◀</span><span class="tx">VOLTAR</span></button>
+<div class="ms-sel" aria-live="polite"><span class="ms-sel-thumb"></span><div class="ms-sel-txt"><small class="ms-sel-meta"></small><b class="ms-sel-title"></b><span class="ms-sel-desc"></span></div></div>
+<button type="button" class="ms-btn ms-diffb" aria-label="Trocar dificuldade"></button>
+<button type="button" class="ms-btn ms-info" aria-label="Detalhes do modo"><span class="ic">ⓘ</span><span class="tx">DETALHES</span></button>
+<button type="button" class="ms-play" disabled><span class="ms-play-l">JOGAR</span><span class="ms-play-k">ENTER</span></button>
+</footer>
+<div class="ms-modal" aria-hidden="true"><div class="ms-dlg" role="document">
+<div class="ms-dart"></div>
+<div class="ms-dbody"><small class="ms-dcat"></small><h3 class="ms-dtitle"></h3><p class="ms-dlong"></p>
+<div class="ms-dstats"></div>
+<h4>OBJETIVOS</h4><ul class="ms-dobj"></ul><h4>DICAS</h4><ul class="ms-dtips"></ul>
+<div class="ms-dact"><button type="button" class="ms-btn ms-dclose">FECHAR</button><button type="button" class="ms-play ms-dplay">JOGAR ▶</button></div></div>
+</div></div>
+</div>
+<div id="monwave" class="scr"><h2>CONTRA MONSTROS</h2>
+<div style="font-size:14px;margin-bottom:8px">Escolha por onde começar:</div>
+<button class="b" id="mwgrad">GRADUAL — começar da onda 1</button>
+<div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;max-width:380px;margin:10px 0">
+<button class="b" data-wave="1" style="padding:8px 12px;font-size:13px">ONDA 1</button>
+<button class="b" data-wave="2" style="padding:8px 12px;font-size:13px">ONDA 2</button>
+<button class="b" data-wave="3" style="padding:8px 12px;font-size:13px">ONDA 3</button>
+<button class="b" data-wave="4" style="padding:8px 12px;font-size:13px">ONDA 4</button>
+<button class="b" data-wave="5" style="padding:8px 12px;font-size:13px">ONDA 5</button>
+<button class="b" data-wave="6" style="padding:8px 12px;font-size:13px">ONDA 6</button>
+<button class="b" data-wave="7" style="padding:8px 12px;font-size:13px">ONDA 7</button>
+<button class="b" data-wave="8" style="padding:8px 12px;font-size:13px">ONDA 8</button>
+<button class="b" data-wave="9" style="padding:8px 12px;font-size:13px">ONDA 9</button>
+<button class="b" data-wave="10" style="padding:8px 12px;font-size:13px">ONDA 10</button>
+</div>
+<div style="font-size:12px;color:#ffd27a;max-width:360px">Quanto maior a onda, mais monstros, mais vida e mais fortes eles ficam.</div>
+<button class="b" id="mwback">VOLTAR</button></div>
+<div id="set" class="scr"><h2>CONFIGURAÇÕES</h2>
+<label>Qualidade <select id="q"><option value="-1">SUPER BAIXA (CELULAR)</option><option value="0">BAIXA</option><option value="1">MÉDIA</option><option value="2">ALTA</option><option value="3">ULTRA</option></select></label>
+<small id="qnote" style="display:block;max-width:360px;font-size:12px;color:#ffd27a;min-height:14px"></small>
+<label>Iluminação <select id="lp"><option value="auto">AUTO (CICLO DIA/NOITE)</option><option value="day">DIA LIMPO</option><option value="cloudy">NUBLADO</option><option value="evening">ENTARDECER</option><option value="night">NOITE HORROR</option></select></label>
+<label>Brilho <input id="bri" type="range" min="0.7" max="1.5" step="0.05"></label>
+<label>Sensibilidade <input id="sens" type="range" min="1" max="10" step="0.5"></label>
+<label>Volume <input id="vol" type="range" min="0" max="1" step="0.1"></label>
+<label>Dificuldade <select id="diff"><option value="easy">FÁCIL</option><option value="normal">NORMAL</option><option value="hard">DIFÍCIL</option><option value="extreme">EXTREMO</option></select></label>
+<button class="b" id="setback">VOLTAR</button></div>
+<div id="info" class="scr"><h2 id="it"></h2><div id="ib" style="max-width:420px;font-size:14px;line-height:1.5"></div><button class="b" id="infoback">VOLTAR</button></div>
+
+<div id="prog" class="scr">
+<h2>PROGRESSÃO</h2>
+<div style="display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:10px">
+<button class="b" id="ptab-shop" style="padding:8px 12px;font-size:13px">LOJA</button>
+<button class="b" id="ptab-stats" style="padding:8px 12px;font-size:13px">STATS</button>
+<button class="b" id="ptab-ach" style="padding:8px 12px;font-size:13px">CONQUISTAS</button>
+<button class="b" id="ptab-daily" style="padding:8px 12px;font-size:13px">DIÁRIOS</button>
+</div>
+<div id="panel-shop" style="display:none;max-width:420px;width:92%;max-height:55vh;overflow:auto;padding:0 8px"><div id="shopbody"></div></div>
+<div id="panel-stats" style="display:none;max-width:420px;width:92%;max-height:55vh;overflow:auto;padding:0 8px"><div id="statsbody"></div></div>
+<div id="panel-ach" style="display:none;max-width:420px;width:92%;max-height:55vh;overflow:auto;padding:0 8px"><div id="achbody"></div></div>
+<div id="panel-daily" style="display:none;max-width:420px;width:92%;max-height:55vh;overflow:auto;padding:0 8px"><div id="dailybody"></div></div>
+<button class="b" id="progback">VOLTAR</button>
+</div>
+
+<div id="pause" class="scr"><h2>PAUSADO</h2><button class="b" id="resume">CONTINUAR</button><button class="b" id="restart">REINICIAR</button>
+<button class="b" id="psettings">CONFIGURAÇÕES</button><button class="b" id="pmodes">TROCAR MODO</button><button class="b" id="tomenu">MENU PRINCIPAL</button></div>
+<div id="end" class="scr"><h2 id="et"></h2><div id="es" style="line-height:1.6"></div>
+<button class="b" id="econt">CONTINUAR</button><button class="b" id="eretry">REINICIAR</button><button class="b" id="emodes">TROCAR MODO</button><button class="b" id="emenu">MENU PRINCIPAL</button></div>
+<div id="hud"><div id="stats"><div id="obj"></div><div id="en"></div><div id="hp"><div id="hpf"></div></div></div>
+<canvas id="radar" width="90" height="90"></canvas><div id="ammo"></div><div id="msg"></div><div id="cross"></div><div id="hm"></div>
+<div id="dmg"></div><div id="dd"><i></i></div><button id="pauseb">II</button>
+<div id="ttbar"><div class="ttname"><b>TITAN</b> <span>THE ANCIENT COLOSSUS</span></div>
+<div class="tttrack"><i id="tttrail"></i><i id="ttfill"></i><em style="left:65%"></em><em style="left:30%"></em></div>
+<div class="ttinfo"><span id="ttph">FASE I</span><span id="tthpt"></span><span id="ttpct"></span></div><div id="tttags"></div></div>
+<div id="ttprison"><div class="ttpl">PRESO NA ROCHA! <b>APERTE PULAR / ESPAÇO REPETIDAMENTE</b> <small>(ESQUIVA vale 3)</small></div><div class="ttpbar"><i id="ttpf"></i></div><div class="ttpbar t"><i id="ttpt"></i></div></div>
+</div>
+<div id="ttfade"></div>
+<div id="ttlb"><i></i><i></i></div>
+<div id="tttitle"><h1>TITAN</h1><h3>THE ANCIENT COLOSSUS</h3></div>
+<button id="ttskip">PULAR CENA ▶▶</button>
+<div id="ttload" class="scr"><h2>TITAN</h2><div id="ttloadtxt">Despertando o colosso…</div><div class="ldbar"><i id="ttloadbar"></i></div><button class="b" id="ttloadback" style="display:none">VOLTAR AO MENU</button></div>
+<div id="ttend" class="scr"><h2 id="ttet">COLOSSUS DEFEATED</h2><div id="ttes"></div><button class="b" id="ttrestart">RESTART BATTLE</button><button class="b" id="ttmodes">TROCAR MODO</button><button class="b" id="ttmenu">RETURN TO MAIN MENU</button></div>
+<div id="look"></div>
+<div id="joy" style="display:none"><div id="knob"></div></div>
+<div class="tb" id="fire">FOGO</div><div class="tb" id="ads">MIRA</div><div class="tb" id="jump">PULAR</div>
+<div class="tb" id="rel">RECAR.</div><div class="tb" id="swp">TROCAR</div><div class="tb" id="crh">AGACH.</div><div class="tb" id="spr">CORRER</div><div class="tb" id="dash">ESQUIVA</div><div class="tb" id="slide">DESLIZ.</div><div class="tb" id="leanl">◀</div><div class="tb" id="leanr">▶</div>
+<div class="tb" id="flashbtn" title="Lanterna (F)">🔦</div>
+<div id="crot">Gire o celular para a posição deitada<br>(ative a rotação automática do aparelho)</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/utils/SkeletonUtils.js"></script>
+<script src="js/core.js"></script>
+</body></html>

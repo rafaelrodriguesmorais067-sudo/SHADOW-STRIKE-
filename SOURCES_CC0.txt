@@ -1,0 +1,26 @@
+# CC0 license audit trail (each file's source page)
+
+pistols/pi_hand/pi_hand_single_near_01.wav
+  https://freesound.org/people/LeMudCrab/sounds/163456/
+pistols/pi_rev/pi_rev_single_near_01.wav
+  https://freesound.org/people/reishugo/sounds/346904/
+assault_rifles/ar/ar_single_near_01.wav
+  https://freesound.org/people/ser%C3%B8ut%C5%8Dnin--depriv%C9%99d/sounds/855841/
+assault_rifles/ar/ar_single_near_02.wav
+  https://freesound.org/people/ser%C3%B8ut%C5%8Dnin--depriv%C9%99d/sounds/855842/
+sniper_rifles/sr/sr_single_near_03.wav
+  https://freesound.org/people/qubodup/sounds/855606/
+sniper_rifles/sr/sr_single_near_04.wav
+  https://freesound.org/people/qubodup/sounds/855607/
+shotguns/sg/sg_single_near_01.wav
+  https://freesound.org/people/LeMudCrab/sounds/163455/
+shotguns/sg/sg_single_near_02.wav
+  https://freesound.org/people/Zott820/sounds/370344/
+explosions/fx_exp/fx_exp_single_far_01.wav
+  https://freesound.org/people/qubodup/sounds/162363/
+explosions/fx_exp/fx_exp_single_near_01.wav
+  https://freesound.org/people/florianreichelt/sounds/563010/
+machine_guns/mg/mg_single_near_01.wav
+  https://freesound.org/people/sidohzen/sounds/165809/
+battle_rifles/br/br_single_near_01.wav
+  https://opengameart.org/content/gunshot-sounds
